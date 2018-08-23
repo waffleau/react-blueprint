@@ -4,12 +4,14 @@ import Style from 'styles';
 
 export const FormField = styled.div`
   color: ${Style.vars.textColorDark};
-  padding-top: ${props => (props.hideLabel ? 0 : '1rem')};
+  padding-top: 1rem;
   position: relative;
   width: 100%;
 
   > label {
-    display: ${props => (props.hideLabel ? 'none' : 'block')};
+    color: ${props =>
+      props.isDisabled ? Style.vars.disabledColor : 'inherit'};
+    display: block;
   }
 
   > input::placeholder {

@@ -9,16 +9,31 @@ import TextInput from 'components/Core/TextInput';
 
 const stories = storiesOf('TextInput', module);
 
-stories.add('with text', () => (
-  <StateContainer>
-    {(state, onChange) => (
-      <TextInput
-        label="Input field"
-        name="input"
-        placeholder="Type some text"
-        value={state.input}
-        onChange={(name: string, value: any) => onChange({ [name]: value })}
-      />
-    )}
-  </StateContainer>
-));
+stories
+  .add('standard', () => (
+    <StateContainer>
+      {(state, onChange) => (
+        <TextInput
+          label="Input field"
+          name="input"
+          placeholder="Type some text"
+          value={state.input}
+          onChange={(name: string, value: any) => onChange({ [name]: value })}
+        />
+      )}
+    </StateContainer>
+  ))
+  .add('disabled', () => (
+    <StateContainer>
+      {(state, onChange) => (
+        <TextInput
+          isDisabled
+          label="Input field"
+          name="input"
+          placeholder="Type some text"
+          value="I am disabled"
+          onChange={(name: string, value: any) => onChange({ [name]: value })}
+        />
+      )}
+    </StateContainer>
+  ));

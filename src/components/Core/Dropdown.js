@@ -7,6 +7,7 @@ import styled from 'styled-components';
 import Style from 'styles';
 
 const Container = styled.div`
+  display: inline-block;
   position: relative;
 `;
 
@@ -14,6 +15,7 @@ const Activator = styled.div`
   background-color: ${props =>
     props.isOpen ? 'rgba(0, 0, 0, 0.02)' : 'inherit'};
   border-radius: ${Style.vars.borderRadius};
+  display: inline-block;
   position: relative;
   transition: background-color 0.2s;
   user-select: none;
@@ -34,7 +36,7 @@ const MenuContainer = styled.div`
   z-index: 10;
 `;
 
-const Menu = styled.ul`
+export const Menu = styled.ul`
   background-color: white;
   border: ${Style.vars.border};
   border-radius: ${Style.vars.borderRadius};
@@ -45,7 +47,7 @@ const Menu = styled.ul`
   z-index: 10;
 `;
 
-const Item = styled.li`
+export const Item = styled.li`
   ${Style.type.paragraph};
   border-bottom: ${Style.vars.border};
   transition: background-color 0.2s;

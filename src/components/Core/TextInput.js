@@ -22,6 +22,11 @@ const Input = styled.input`
     border-color: ${Style.colors.primary};
   }
 
+  &:disabled {
+    background-color: #eee;
+    color: ${Style.vars.disabledColor};
+  }
+
   &::placeholder {
     color: ${Style.vars.placeholderColor};
     opacity: 1;
@@ -29,7 +34,6 @@ const Input = styled.input`
 `;
 
 export type Props = {
-  hideLabel?: boolean,
   isDisabled?: boolean,
   label?: string,
   name: string,
@@ -51,18 +55,10 @@ export class TextInput extends PureComponent<Props> {
   };
 
   render() {
-    const {
-      hideLabel,
-      isDisabled,
-      label,
-      name,
-      placeholder,
-      type,
-      value,
-    } = this.props;
+    const { isDisabled, label, name, placeholder, type, value } = this.props;
 
     return (
-      <FormField hideLabel={hideLabel || !label}>
+      <FormField isDisabled={isDisabled}>
         <Input
           disabled={isDisabled}
           name={name}

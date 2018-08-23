@@ -24,7 +24,7 @@ stories
       )}
     </StateContainer>
   ))
-  .add('with default', () => (
+  .add('with default option', () => (
     <StateContainer>
       {(state, onChange) => (
         <SelectInput

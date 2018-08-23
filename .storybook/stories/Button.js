@@ -12,7 +12,7 @@ const stories = storiesOf('Button', module);
 stories.addDecorator(withKnobs);
 
 stories
-  .add('with text', () => {
+  .add('standard', () => {
     const label = text('Name', 'My button');
     return <Button onClick={action('clicked')}>{label}</Button>;
   })

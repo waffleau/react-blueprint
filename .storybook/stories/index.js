@@ -2,6 +2,7 @@
 
 import './Button';
 import './Card';
+import './Dropdown';
 import './Grid';
 import './Icon';
 import './Modal';
