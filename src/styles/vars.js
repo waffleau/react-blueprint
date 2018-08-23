@@ -14,5 +14,6 @@ export default {
   screenLarge: '1366px',
   screenExtraLarge: '1920px',
 
+  placeholderColor: '#ccc',
   textColorDark: 'rgba(0, 0, 0, 0.87)',
 };

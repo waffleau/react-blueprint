@@ -2,6 +2,7 @@
 
 import 'styles/global/reset.css';
 import 'styles/global/scaffold.css';
+import './preview.css';
 
 import { configure } from '@storybook/react';
 

@@ -20,19 +20,26 @@ const Container = styled.button`
     background-color: ${Style.utils.darken(Style.colors.primary, 0.1)};
     box-shadow: ${Style.vars.boxShadow2};
   }
+
+  &:disabled {
+    background-color: #ccc;
+    box-shadow: none;
+    color: #999;
+    cursor: default;
+  }
 `;
 
 type Props = {
   children: Node,
-  disabled?: boolean,
+  isDisabled?: boolean,
   onClick: any,
 };
 
 class Button extends PureComponent<Props> {
   render() {
-    const { children, disabled, onClick } = this.props;
+    const { children, isDisabled, onClick } = this.props;
     return (
-      <Container disabled={disabled} onClick={onClick}>
+      <Container disabled={isDisabled} onClick={onClick}>
         {children}
       </Container>
     );

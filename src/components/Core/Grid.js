@@ -5,19 +5,19 @@ import styled from 'styled-components';
 import Style from 'styles';
 
 function calculateSmallSpan(props: Object) {
-  return props.s || 12;
+  return props.small || 12;
 }
 
 function calculateMediumSpan(props: Object) {
-  return props.m || calculateSmallSpan(props);
+  return props.medium || calculateSmallSpan(props);
 }
 
 function calculateLargeSpan(props: Object) {
-  return props.l || calculateMediumSpan(props);
+  return props.large || calculateMediumSpan(props);
 }
 
 function calculateExtraLargeSpan(props: Object) {
-  return props.xl || calculateLargeSpan(props);
+  return props.xlarge || calculateLargeSpan(props);
 }
 
 const mediumWidth = Style.vars.screenMedium;

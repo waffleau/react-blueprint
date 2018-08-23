@@ -3,11 +3,18 @@
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 
+const SIZES = {
+  small: '1rem',
+  medium: '1.5rem',
+  large: '2rem',
+  xlarge: '2.5rem',
+};
+
 const Container = styled.div`
   display: flex;
-  height: 1rem;
+  height: ${props => SIZES[props.size || 'medium']};
   position: relative;
-  width: 1rem;
+  width: ${props => SIZES[props.size || 'medium']};
 
   > * {
     left: 0;
@@ -20,6 +27,7 @@ const Container = styled.div`
 
 type Props = {
   name: string,
+  size: string,
 };
 
 const ICONS = {
@@ -29,8 +37,12 @@ const ICONS = {
 };
 
 class Icon extends PureComponent<Props> {
+  static defaultProps = {
+    size: 'medium',
+  };
+
   render() {
-    const { name } = this.props;
+    const { name, size } = this.props;
     const IconComponent = ICONS[name];
 
     if (!IconComponent) {
@@ -39,7 +51,7 @@ class Icon extends PureComponent<Props> {
     }
 
     return (
-      <Container>
+      <Container size={size}>
         <IconComponent />
       </Container>
     );
