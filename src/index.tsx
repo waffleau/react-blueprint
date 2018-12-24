@@ -18,4 +18,4 @@ const RootContainer = () => (
   </Provider>
 );
 
-ReactDOM.render(<RootContainer />, document.getElementById('root'));
+ReactDOM.render(<RootContainer />, document.getElementById('react'));

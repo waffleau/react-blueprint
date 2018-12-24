@@ -10,7 +10,7 @@ import {
 } from 'react-router-dom';
 import { hot } from 'react-hot-loader';
 
-import Page from './views/Page';
+import Page from 'views/Page';
 
 interface Props extends RouteComponentProps<any> {}
 

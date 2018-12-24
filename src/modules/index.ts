@@ -1,3 +1,5 @@
 export default {
-  global: (state: Object) => state || {},
+  global: require('./global').default,
+  levels: require('./levels').default,
+  worlds: require('./worlds').default,
 };

@@ -22,7 +22,7 @@ export class SideEffect extends PureComponent<Props> {
     if (changes.length > 0) nextProps.onChange();
   }
 
-  render() {
+  render(): null {
     return null;
   }
 }

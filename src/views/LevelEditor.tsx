@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 interface Props {}
 
-class Page extends PureComponent<Props> {
+class LevelEditor extends PureComponent<Props> {
   render() {
     return <div>Page</div>;
   }
@@ -21,4 +21,4 @@ function mapDispatchToActions(dispatch: () => any) {
 export default connect(
   mapStateToProps,
   mapDispatchToActions
-)(Page);
+)(LevelEditor);
