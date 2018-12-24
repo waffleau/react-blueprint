@@ -1,7 +1,6 @@
-import { createActionType, createReducer } from 'helpers/redux';
+import { createReducer } from 'helpers/redux';
 
 // -- Types
-export const BRUSH_CHANGED = createActionType('BRUSH_CHANGED');
 
 // -- Actions
 
